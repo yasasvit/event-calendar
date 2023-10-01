@@ -37,4 +37,12 @@ public class Contact {
     public boolean isValid() {
         return isDepartmentValid() && isEmailValid();
     }
+
+    public String getDepartmentName() {
+        return department.getName();
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }
