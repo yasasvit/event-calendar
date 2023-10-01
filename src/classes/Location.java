@@ -11,7 +11,7 @@ public enum Location {
     private final String roomNumber;
     private final String buildingAndCampus;
 
-    Location(String roomNumber, String buildingAndCampus) {
+    private Location(String roomNumber, String buildingAndCampus) {
         this.roomNumber = roomNumber;
         this.buildingAndCampus = buildingAndCampus;
     }
@@ -22,5 +22,9 @@ public enum Location {
 
     public String getBuildingAndCampus() {
         return buildingAndCampus;
+    }
+
+    public boolean equals(Location otherLocation) {
+        return this == otherLocation;
     }
 }

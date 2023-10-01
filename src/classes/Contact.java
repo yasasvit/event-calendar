@@ -6,8 +6,8 @@ public class Contact {
 
     // Constructor
     // Constants for valid department names and email regex pattern
-    private static final String[] validDepartments = {"Computer Science", "Mathematics" +
-            "Information Technology and Informatics", "Electrical Engineering", "Business Analytics and Information Technology"};
+    private static final String[] validDepartments = {"CS", "MATH" +
+            "ITI", "EE", "BAIT"};
     private static final String emailPattern = "^[A-Za-z0-9+_.-]+@(.+)$";
 
     // Constructor

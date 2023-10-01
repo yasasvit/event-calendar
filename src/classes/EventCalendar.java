@@ -4,8 +4,6 @@ public class EventCalendar {
     private Event [] events; // this holds the list of all events
     private int numEvents; // shows the current number of events in the array
     private static final int initialSize = 4;
-    private static final int multiplier = 4;
-    private static final int notFound = -1;
 
     public EventCalendar() {
         events = new Event[initialSize];
@@ -17,7 +15,7 @@ public class EventCalendar {
                 return i;
             }
         }
-        return notFound;
+        return -1;
     }
 
     private void grow() { // this will increase the capacity of the array by 4
@@ -27,6 +25,9 @@ public class EventCalendar {
     }
 
     public boolean add(Event event) {
+        if (find(event) != -1) {
+            return false; // event already exists
+        }
         if (numEvents == events.length) {
             grow();
         }
@@ -36,7 +37,7 @@ public class EventCalendar {
 
     public boolean remove(Event event) {
         int index = find(event);
-        if (index != notFound) {
+        if (index != -1) {
             for (int i = index; i < numEvents - 1; i++) {
                 events[i] = events[i + 1];
             }
@@ -48,8 +49,12 @@ public class EventCalendar {
     }
 
     public boolean contains(Event event) {
-        return find(event) != notFound;
+        int result = find(event);
+        return result != -1;
+
     }
+
+    // ABOVE ALL LOOKS GOOD
 
     private void insertionSort() {
         for (int i = 1; i < numEvents; i++) {
@@ -83,5 +88,6 @@ public class EventCalendar {
         insertionSort();
         print();
     }
+
 
 }

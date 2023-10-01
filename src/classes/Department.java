@@ -7,14 +7,14 @@ public enum Department {
     MATH("Mathematics"),
     BAIT("Business Analytics and Information Technology");
 
-    private final String fullName;
+    private final String departmentName;
 
-    Department(String fullName) {
-        this.fullName = fullName;
+    private Department(String departmentName) {
+        this.departmentName = departmentName;
     }
 
     public String getName() {
-        return fullName;
+        return departmentName;
     }
 
 }
