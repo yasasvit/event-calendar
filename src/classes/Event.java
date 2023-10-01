@@ -55,9 +55,9 @@ public class Event implements Comparable<Event>{
     // ToString method
     @Override
     public String toString() {
-        return "[Event Date: " + DATE_FORMAT.format(date) + "] [Start: " +
-                TIME_FORMAT.format(startTime) + "] [End: " +
-                TIME_FORMAT.format(new Timeslot(startTime.getTime() + duration * 60000)) + "] @" +
+        return "[Event Date: " + dateFormat.format(String.valueOf(date)) + "] [Start: " +
+                timeFormat.format(String.valueOf(startTime)) + "] [End: " +
+                timeFormat.format(new Timeslot(startTime.getTime() + duration * 60000)) + "] @" +
                 location.toString() + " [Contact: " + contact.getDepartmentName() + ", " + contact.getEmail() + "]";
     }
 }
