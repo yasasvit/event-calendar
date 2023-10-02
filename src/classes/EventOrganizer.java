@@ -15,11 +15,13 @@ public class EventOrganizer {
         organizer.run();
     }
 
+    //constructor
     public EventOrganizer() {
         this.eventCalendar = new EventCalendar();
         System.out.println("Event Organizer running....");
     }
 
+    //a command line user interface for the class
     public void run() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -32,6 +34,7 @@ public class EventOrganizer {
         scanner.close();
     }
 
+    //this method is responsible for read and executing the commands from the user interface
     private boolean processCommand(String input) {
         String[] tokens = input.split(" ");
 //        if (tokens.length != 7) {
