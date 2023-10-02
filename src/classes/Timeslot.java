@@ -1,5 +1,10 @@
 package classes;
 
+/**
+This class contains the information for the 3 timeslots
+@author Pranav Gummaluri, Yasasvi Tallapaneni
+*/
+
 public enum Timeslot {
     MORNING(10, 30),
     AFTERNOON(14, 0),
