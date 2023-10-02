@@ -1,5 +1,10 @@
 package classes;
 
+/**
+This class contains the information for the 6 locations
+@author Pranav Gummaluri, Yasasvi Tallapaneni
+*/
+
 public enum Location {
     HLL114("HLL114", "Hill Center, Busch"),
     ARC103("ARC103", "Allison Road Classroom, Busch"),
