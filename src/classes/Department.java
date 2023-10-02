@@ -13,11 +13,12 @@ public enum Department {
     BAIT("Business Analytics and Information Technology");
 
     private final String departmentName;
-
+    
+    //Constructor
     private Department(String departmentName) {
         this.departmentName = departmentName;
     }
-
+    //Getter
     public String getName() {
         return departmentName;
     }
