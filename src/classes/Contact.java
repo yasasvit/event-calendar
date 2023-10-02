@@ -1,5 +1,11 @@
 package classes;
 
+/**
+This class contains the contact information such as the email and department
+It also checks for the validity of the contact
+@author Pranav Gummaluri, Yasasvi Tallapaneni
+*/
+
 public class Contact {
     private Department department;
     private String email;
