@@ -1,5 +1,12 @@
 package classes;
 import java.util.Date;
+
+/**
+This class contains the array information for the events
+It has all the information including date, start time, location, duration and contact
+@author Pranav Gummaluri, Yasasvi Tallapaneni
+*/
+
 // EVENT WORKS
 public class Event implements Comparable<Event>{
     private Date date;
