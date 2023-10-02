@@ -11,10 +11,13 @@ public class EventCalendar {
     private int numEvents; // shows the current number of events in the array
     private static final int initialSize = 4;
 
+    //constructor
     public EventCalendar() {
         events = new Event[initialSize];
         numEvents = 0;
     }
+
+    //a method to find a certain event and displays the index of the event
     private int find(Event event) { // search for events in the list
         for (int i = 0; i < numEvents; i++) {
             if (events[i].equals(event)) {
@@ -24,12 +27,14 @@ public class EventCalendar {
         return -1;
     }
 
-    private void grow() { // this will increase the capacity of the array by 4
+    // this method will increase the capacity of the array by 4
+    private void grow() { 
         Event[] newEvent = new Event[events.length + 4];
         System.arraycopy(events, 0, newEvent, 0, numEvents);
         events = newEvent;
     }
 
+    //a method to add an event into the array
     public boolean add(Event event) {
         if (find(event) != -1) {
             return false; // event already exists
@@ -40,7 +45,8 @@ public class EventCalendar {
         events[numEvents++] = event;
         return true;
     }
-
+    
+    //method to remove an event from the array if necessary
     public boolean remove(Event event) {
         int index = find(event);
         if (index != -1) {
@@ -54,6 +60,7 @@ public class EventCalendar {
         return false;
     }
 
+    //a boolean to check if a certain event exists in the array
     public boolean contains(Event event) {
         int result = find(event);
         return result != -1;
@@ -61,7 +68,7 @@ public class EventCalendar {
     }
 
     // ABOVE ALL LOOKS GOOD
-
+    //Insertion sort method to sort through the events array
     private void insertionSort() {
         for (int i = 1; i < numEvents; i++) {
             Event keyNum = events[i];
@@ -74,6 +81,7 @@ public class EventCalendar {
         }
     }
 
+    //Print statements
     public void print() {
         for (int i = 0; i < numEvents; i++) {
             System.out.println(events[i]);
