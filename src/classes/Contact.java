@@ -1,24 +1,28 @@
 package classes;
-
+/**
+  Represents a contact with a department and an email
+  @author Pranav Gummaluri, Yasasvi Tallapaneni
+ */
 public class Contact {
     private Department department;
     private String email;
 
-    // Constructor
-    // Constants for valid department names and email regex pattern
-    private static final String[] validDepartments = {"CS", "MATH" +
-            "ITI", "EE", "BAIT"};
-    private static final String emailPattern = "^[A-Za-z0-9+_.-]+@(.+)$";
+    private static final String[] validDepartments = {"CS", "MATH", "ITI", "EE", "BAIT", "cs", "math", "iti", "ee", "bait"};
 
-    // Constructor
+
+    /**
+     * Creates a contact with the respective department and email
+     * @param department the department of the contact
+     * @param email the email of the contact
+     */
     public Contact(Department department, String email) {
         this.department = department;
         this.email = email;
     }
-
-    // Getter methods (assuming you have getters for department and email)
-
-    // Method to check if the department name is valid
+    /**
+     * Checks if the department is valid
+     * @return true if department is valid, false otherwise
+     */
     private boolean isDepartmentValid() {
         for (String validDepartment : validDepartments) {
             if (validDepartment.equals(department.getName())) {
@@ -27,21 +31,33 @@ public class Contact {
         }
         return false;
     }
-
-    // Method to check if the email is valid
+    /**
+     * Checks if the email is valid
+     * @return true if email is valid, false otherwise
+     */
     private boolean isEmailValid() {
+        String emailPattern = "^[A-Za-z0-9+_.-]+@rutgers\\.edu$";
         return email.matches(emailPattern);
     }
-
-    // isValid method to check if both department and email are valid
+    /**
+     * Checks if the contact is valid
+     * @return true if contact is valid, false otherwise
+     */
     public boolean isValid() {
         return isDepartmentValid() && isEmailValid();
     }
-
+    /**
+     * Returns the full department name
+     * @return String of the full department name
+     */
     public String getDepartmentName() {
-        return department.getName();
-    }
 
+        return department.getFullName();
+    }
+    /**
+     * Returns the email
+     * @return String of the email
+     */
     public String getEmail() {
         return email;
     }
