@@ -1,6 +1,13 @@
 package classes;
 import java.util.Objects;
 import java.util.Scanner;
+
+/**
+This class contains the proper user interface to enter an event into the system
+It displays the information in proper syntax after entered
+@author Pranav Gummaluri, Yasasvi Tallapaneni
+*/
+
 public class EventOrganizer {
     private EventCalendar eventCalendar;
     public static void main(String[] args) {
