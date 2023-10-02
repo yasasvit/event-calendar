@@ -1,5 +1,10 @@
 package classes;
 
+/**
+This class contains the information for the 5 departments
+@author Pranav Gummaluri, Yasasvi Tallapaneni
+*/
+
 public enum Department {
     CS("Computer Science"),
     EE("Electrical Engineering"),
