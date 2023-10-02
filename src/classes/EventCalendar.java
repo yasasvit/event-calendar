@@ -1,5 +1,11 @@
 package classes;
 
+/**
+This class contains the user interface for adding/removing events
+It can also be used to see if a certain event is in the calender
+@author Pranav Gummaluri, Yasasvi Tallapaneni
+*/
+
 public class EventCalendar {
     private Event [] events; // this holds the list of all events
     private int numEvents; // shows the current number of events in the array
