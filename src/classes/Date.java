@@ -46,6 +46,8 @@ public class Date implements Comparable<Date>{
     public int getDay(){
         return day;
     }
+
+    //a comparison of two date objects, determines order of the dates
     @Override
     public int compareTo(Date other) {
         if (this.year != other.year) {
@@ -57,6 +59,7 @@ public class Date implements Comparable<Date>{
         return Integer.compare(this.day, other.day);
     }
 
+    //a boolean to see if the information matches up with the original inputs
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -89,6 +92,7 @@ public class Date implements Comparable<Date>{
         return day <= daysInMonth[month];
     }
 
+    //a boolean to see if an inputted year is a leap year
     private boolean isLeapYear(int year) {
         if (year % QUADYEAR == 0) {
             if (year % CENTURY == 0) {
@@ -117,6 +121,7 @@ public class Date implements Comparable<Date>{
         testResult(date, expectedOutput, actualOutput);
     }
 
+    //testcase 2
     private static void testDaysInFeb_Leap() {
         Date date = new Date("2/29/2020");
         boolean expectedOutput = true;
@@ -124,6 +129,7 @@ public class Date implements Comparable<Date>{
         testResult(date, expectedOutput, actualOutput);
     }
 
+    //testcase 3
     private static void testMonth_OutOfRange() {
         Date date = new Date("12/32/2022");
         boolean expectedOutput = false;
