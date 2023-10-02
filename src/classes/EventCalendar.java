@@ -130,7 +130,10 @@ public class EventCalendar {
         for (int i = 0; i < numEvents - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < numEvents; j++) {
-                if (events[j].getLocation().compareTo(events[minIndex].getLocation()) < 0) {
+                String buildingAndCampus1 = events[j].getLocation().getBuildingAndCampus();
+                String buildingAndCampus2 = events[minIndex].getLocation().getBuildingAndCampus();
+
+                if (buildingAndCampus1.compareTo(buildingAndCampus2) < 0) {
                     minIndex = j;
                 }
             }
