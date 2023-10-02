@@ -45,6 +45,8 @@ public class Event implements Comparable<Event>{
         return duration;
     }
     // Methods
+
+    //This method checks if the instances are equal to each other
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -77,7 +79,7 @@ public class Event implements Comparable<Event>{
         return other.startTime.compareTo(startTime);
     }
 
-//     Need to implement toString method
+    //Need to implement toString method
     @Override
     public String toString() {
         String dateFormat = String.format("%02d/%02d/%04d", date.getMonth(), date.getDay(), date.getYear());
@@ -101,6 +103,7 @@ public class Event implements Comparable<Event>{
         testDiffEvents();
     }
 
+    //testcase 1
     private static void testSameEvents() {
         Date date1 = new Date("12/20/2023");
         Timeslot startTime1 = Timeslot.AFTERNOON;
@@ -123,6 +126,7 @@ public class Event implements Comparable<Event>{
         testResult(event1, event2, expectedOutput, actualOutput);
     }
 
+    //testcase 2
     private static void testDiffEvents() {
         Date date1 = new Date("10/21/2023");
         Timeslot startTime1 = Timeslot.MORNING;
