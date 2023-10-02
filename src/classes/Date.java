@@ -1,5 +1,12 @@
 package classes;
 import java.util.Calendar;
+
+/**
+This class contains the date information such as the date and time
+It also checks for a real date (Feb 30 isn't real) and checks for leap day (Feb 29)
+@author Pranav Gummaluri, Yasasvi Tallapaneni
+*/
+
 // DATE WORKS
 public class Date implements Comparable<Date>{
     private int year;
