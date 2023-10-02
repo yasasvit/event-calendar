@@ -148,11 +148,11 @@ public class EventOrganizer {
                 break;
             case "PE":
                 if (eventCalendar.length() == 0) { System.out.println("Event calendar is empty!");}
-                else { eventCalendar.printByDate(); }
+                else { eventCalendar.printByDateAndTime(); }
                 break;
             case "PC":
                 if (eventCalendar.length() == 0) { System.out.println("Event calendar is empty!");}
-                else { eventCalendar.printByCampus(); }
+                else { eventCalendar.printByCampusAndBuilding(); }
                 break;
             case "PD":
                 if (eventCalendar.length() == 0) { System.out.println("Event calendar is empty!");}
